@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #35424a;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #2d3a3e;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        section.content {
+            padding: 20px;
+        }
+        footer {
+            background-color: #35424a;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <title>My Website</title>
+    <script>
+        function toggleFeedbackForm() {
+            var feedbackForm = document.getElementById("feedback-form");
+            feedbackForm.style.display = feedbackForm.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#feedback" onclick="toggleFeedbackForm()">Feedback</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <section class="content" id="home">
+        <h2>Home Page</h2>
+        <p>This is the home page content.</p>
+    </section>
+    <section class="content" id="about">
+        <h2>About Page</h2>
+        <p>This is the about page content.</p>
+    </section>
+    <section class="content" id="education">
+        <h2>Education Page</h2>
+        <p>This is the education page content.</p>
+    </section>
+    <section class="content" id="skills">
+        <h2>Skills Page</h2>
+        <p>This is the skills page content.</p>
+    </section>
+    <section class="content" id="feedback">
+        <h2>Feedback Page</h2>
+        <p>This is the feedback page content.</p>
+        <div id="feedback-form" style="display: none;">
+            <h3>Provide Feedback</h3>
+            <form>
+                <label for="feedback-text">Your Feedback:</label><br>
+                <textarea id="feedback-text" rows="4" cols="50"></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </section>
+    <section class="content" id="contact">
+        <h2>Contact Us Page</h2>
+        <p>This is the contact us page content.</p>
+    </section>
+    <footer>
+        &copy; 2023 My Website. All Rights Reserved.
+    </footer>
+</body>
+</html>
